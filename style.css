@@ -1,0 +1,34 @@
+html,
+body {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+#presentacion {
+    background: url('https://www.xtrafondos.com/wallpapers/montanas-en-atardecer-colorido-4894.jpg') center center no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.datos {
+    text-align: center;
+    align-items: center;
+}
+
+#cover-texto {
+    width: 100%;
+}
+
+#cover-texto .form-inline {
+    padding: 5rem 0;
+}
+
+
+/*Estilos mapa */

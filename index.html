@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Mapa</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">TP Final</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#presentacion">Presentación<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#seccion2">Mapa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer">Footer</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <section id="presentacion">
+        <div id="cover-texto">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1 class="display-3">
+                            Trabajo Practico Final Programación III
+                        </h1>
+                    </div>
+                </div>
+                <br>
+                <div class="display-3" style="text-align: center;">
+                    <div class="row display-3">
+                        <h4 class="col-md-4">Legajo: 111992</h4>
+                        <h4 class="col-md-4">Nombre: Lautaro</h4>
+                        <h4 class="col-md-4">Apellido: Di Sbroiavacca</h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="seccion2">
+        <section style="background-color: cyan;">
+            <br><br>
+            <div style="height: 70vh; width: 70vw;" id="mapContainer" class="container">
+
+                <input class="form-control mr-sm-2" placeholder="Search for a Place or an Address." type="text" name="search" id="search" autocomplete="off" onkeyup="autosuggest(this)" autofocus />
+                <!-- <i class="fa fa-search fa-search-custom" aria-hidden="true"></i> -->
+                <div class="dropdown">
+                    <ul id="list" style="cursor: pointer;"></ul>
+                </div>
+                <button class="btn btn-primary col-md-12" onclick="agregarMarcador()" style="width: 70vw;">Buscar</button>
+            </div>
+            <br><br><br><br><br><br>
+
+        </section>
+
+    </section>
+
+
+
+    <section id="footer">
+        <footer class="bg-light text-center text-lg-start">
+            <div class="container p-4">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Info del ALumno</h5>
+                        <p>
+                            Trabajo practico realizado por Lautaro Di Sbroiavacca, alumno de la carrera Tecnicatura Universitaria en Programación de la Universidad Nacional de Córdoba, Argentina.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Sintesis del Trabajo</h5>
+                        <p>
+                            El trabajo consta de la realización de una pagina web que consuma una API alojada en el dominio https://nhorenstein.com con el objetivo de cargar un marcador en un mapa en unas coordenadas correspondientes al Parque Kempes, utilizando los servicios HERE
+                            Map
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2021 Copyright:
+                <a class="text-dark" href="https://www.here.com/">HERE Maps</a>
+            </div>
+        </footer>
+    </section>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+<script>
+    var platform = new H.service.Platform({
+        apikey: `AtCo2-w91WGHG8LqfiywJ2tZTSGxVZSFjuXDKIJjg6Q` // replace with your api key
+    });
+    var defaultLayers = platform.createDefaultLayers();
+
+    //Step 2: initialize a map - this map is centered over Europe
+    var map = new H.Map(document.getElementById('mapContainer'),
+        defaultLayers.vector.normal.map, {
+            center: {
+                lat: 50,
+                lng: 5
+            },
+            zoom: 9,
+            pixelRatio: window.devicePixelRatio || 1
+        });
+    // add a resize listener to make sure that the map occupies the whole container
+    window.addEventListener('resize', () => map.getViewPort().resize());
+
+    //Step 3: make the map interactive
+    // MapEvents enables the event system
+    // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+    var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+    // Create the default UI components
+    var ui = H.ui.UI.createDefault(map, defaultLayers);
+    // Now use the map as required...
+    window.onload = function() {
+        //moveMapToBerlin(map);
+        getDeafultLocation();
+    }
+    const autosuggest = (e) => {
+        if (event.metaKey) {
+            return
+        }
+
+        let searchString = e.value
+        if (searchString != "") {
+            fetch(
+                    `https://autosuggest.search.hereapi.com/v1/autosuggest?apiKey=${platform.a}&at=33.738045,73.084488&limit=5&resultType=city&q=${searchString}&lang=en-US`
+                )
+                .then((res) => res.json())
+                .then((json) => {
+                    if (json.length != 0) {
+                        document.getElementById("list").innerHTML = ``;
+                        let dropData = json.items.map((item) => {
+                            if ((item.position != undefined) & (item.position != ""))
+                                document.getElementById("list").innerHTML += `<li onClick="addMarkerToMap(${item.position.lat},${item.position.lng},'${item.title}')">${item.title}</li>`;
+                        });
+                    }
+                });
+        }
+    };
+    // to get deafult location after loading the page
+    function getDeafultLocation() {
+        var lat = -31.417;
+        var lng = -64.183;
+        var title = "Córdoba";
+        map.setZoom(11);
+        addMarkerToMap(lat, lng, title);
+
+    }
+
+    function agregarMarcador() {
+        $.ajax({
+            url: "https://nhorenstein.com/Coordenada/GetConPunto",
+            type: "GET",
+            success: function(result) {
+                if (result.ok) {
+                    let titulo = 'Club Teléfonos';
+                    map.setCenter();
+                    map.setZoom(11);
+                    addMarkerToMap(result.return.latitud, result.return.longitud, titulo);
+
+                } else {
+                    swal.fire('Redireccionando a la UTN')
+                    map.setCenter();
+                    map.setZoom(11);
+                    addMarkerToMap(-31.44278, -64.19373, 'UTN');
+                }
+            },
+            error: function(error) {
+                swal.fire('ERROR EN CONEXIÓN CON LA API: Redireccionando a la UTN')
+                let titulo = "UTN Cordoba";
+                map.setCenter();
+                map.setZoom(11);
+                addMarkerToMap(-31.44278, -64.19373, titulo);
+            }
+        });
+    }
+
+    // adding marker to map
+    const addMarkerToMap = (lat, lng, title) => {
+        map.removeObjects(map.getObjects())
+        document.getElementById("search").value = title;
+        var selectedLocationMarker = new H.map.Marker({
+            lat,
+            lng
+        });
+        map.addObject(selectedLocationMarker);
+        document.getElementById("list").innerHTML = ``;
+        map.setCenter({
+            lat,
+            lng
+        }, true);
+    };
+</script>
+
+</html>
